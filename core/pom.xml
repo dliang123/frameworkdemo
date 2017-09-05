@@ -11,6 +11,7 @@
 
     <groupId>com.yt.demo</groupId>
     <artifactId>core</artifactId>
+    <packaging>jar</packaging>
 
     <dependencies>
         <dependency>
