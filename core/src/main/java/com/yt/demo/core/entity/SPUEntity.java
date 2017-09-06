@@ -45,8 +45,7 @@ public class SPUEntity extends AuditEntity<Long>{
 	@Column(name = "category_id",nullable=false)
 	private Long categoryId;
 
-	@Column(name = "category_code",nullable=false)
-	private String categoryCode;
+
 	
 	//型号ID
 	@Column(name = "model_id")
@@ -192,14 +191,6 @@ public class SPUEntity extends AuditEntity<Long>{
 
 	public void setBrandPath(String brandPath) {
 		this.brandPath = brandPath;
-	}
-
-	public String getCategoryCode() {
-		return categoryCode;
-	}
-
-	public void setCategoryCode(String categoryCode) {
-		this.categoryCode = categoryCode;
 	}
 
 	public String getModelPath() {

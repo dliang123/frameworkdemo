@@ -7,39 +7,39 @@
         http://www.springframework.org/schema/beans/spring-beans.xsd
         http://www.springframework.org/schema/context
         http://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd">
-   	<!--<bean id="objectMapper" class="com.fasterxml.jackson.databind.ObjectMapper">-->
-        <!--<property name="serializationInclusion" value="NON_NULL"/>-->
-    <!--</bean>-->
+    <bean id="objectMapper" class="com.fasterxml.jackson.databind.ObjectMapper">
+        <property name="serializationInclusion" value="NON_NULL"/>
+    </bean>
 
     <!--<bean id="handlerAdapter" class="com.yuntu.web.HandlerAdapter">-->
-        <!--<property name="skipCustomHandlerAdapterWithMethod">-->
-            <!--<list>-->
-                <!--<value>springfox.documentation.swagger.web.ApiResourceController.securityConfiguration</value>-->
-                <!--<value>springfox.documentation.swagger.web.ApiResourceController.uiConfiguration</value>-->
-                <!--<value>springfox.documentation.swagger.web.ApiResourceController.swaggerResources</value>-->
-                <!--<value>springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation</value>-->
-            <!--</list>-->
-        <!--</property>-->
+    <!--<property name="skipCustomHandlerAdapterWithMethod">-->
+    <!--<list>-->
+    <!--<value>springfox.documentation.swagger.web.ApiResourceController.securityConfiguration</value>-->
+    <!--<value>springfox.documentation.swagger.web.ApiResourceController.uiConfiguration</value>-->
+    <!--<value>springfox.documentation.swagger.web.ApiResourceController.swaggerResources</value>-->
+    <!--<value>springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation</value>-->
+    <!--</list>-->
+    <!--</property>-->
     <!--</bean>-->
 
-    <bean id="multipartResolver"
-          class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
-        <property name="defaultEncoding" value="UTF-8"></property>
-        <property name="maxUploadSize" value="5400000"></property>
-        <!--<property name="uploadTempDir" value="fileUpload/temp"></property>-->
-    </bean>
-    
-    
- 	 <mvc:annotation-driven>
+    <!--<bean id="multipartResolver"-->
+    <!--class="org.springframework.web.multipart.commons.CommonsMultipartResolver">-->
+    <!--<property name="defaultEncoding" value="UTF-8"></property>-->
+    <!--<property name="maxUploadSize" value="5400000"></property>-->
+    <!--<property name="uploadTempDir" value="fileUpload/temp"></property>-->
+    <!--</bean>-->
+
+
+    <mvc:annotation-driven>
         <mvc:message-converters>
             <bean class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter">
             </bean>
-   			</mvc:message-converters>
-   </mvc:annotation-driven>
+        </mvc:message-converters>
+    </mvc:annotation-driven>
 
-    <mvc:interceptors>
-        <!--<bean class="com.yuntu.web.interceptor.MonitorInterceptor"/>-->
-    </mvc:interceptors>
+    <!--<mvc:interceptors>-->
+    <!--&lt;!&ndash;<bean class="com.yuntu.web.interceptor.MonitorInterceptor"/>&ndash;&gt;-->
+    <!--</mvc:interceptors>-->
 
     <mvc:view-resolvers>
         <mvc:content-negotiation>

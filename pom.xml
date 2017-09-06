@@ -39,6 +39,8 @@
         <io.springfox.version>2.4.0</io.springfox.version>
         <org.hibernate.version>5.2.9.Final</org.hibernate.version>
         <org.hibernate.validate.version>6.0.2.Final</org.hibernate.validate.version>
+        <slf4j.version>1.7.25</slf4j.version>
+        <com.fasterxml.jackson.version>2.7.4</com.fasterxml.jackson.version>
 
 
     </properties>
@@ -99,6 +101,16 @@
                 <groupId>org.springframework</groupId>
                 <artifactId>spring-webmvc</artifactId>
                 <version>${spring.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-aspects</artifactId>
+                <version>${spring.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>slf4j-simple</artifactId>
+                <version>${slf4j.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.springframework</groupId>
@@ -171,7 +183,11 @@
                 <artifactId>hibernate-validator</artifactId>
                 <version>${org.hibernate.validate.version}</version>
             </dependency>
-
+            <dependency>
+                <groupId>com.fasterxml.jackson.core</groupId>
+                <artifactId>jackson-databind</artifactId>
+                <version>${com.fasterxml.jackson.version}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
     <build>
