@@ -40,6 +40,7 @@
         <org.hibernate.version>5.2.9.Final</org.hibernate.version>
         <org.hibernate.validate.version>6.0.2.Final</org.hibernate.validate.version>
 
+
     </properties>
     <!-- 软件配置管理 -->
     <scm>
@@ -79,8 +80,16 @@
     <!--</distributionManagement>-->
     <dependencyManagement>
         <dependencies>
-
-
+            <dependency>
+                <groupId>com.yt.demo</groupId>
+                <artifactId>portal</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.yt.demo</groupId>
+                <artifactId>core</artifactId>
+                <version>${project.version}</version>
+            </dependency>
             <dependency>
                 <groupId>mysql</groupId>
                 <artifactId>mysql-connector-java</artifactId>
@@ -91,10 +100,15 @@
                 <artifactId>spring-webmvc</artifactId>
                 <version>${spring.version}</version>
             </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-orm</artifactId>
+                <version>${spring.version}</version>
+            </dependency>
             <!--<dependency>-->
-                <!--<groupId>org.springframework</groupId>-->
-                <!--<artifactId>spring-web</artifactId>-->
-                <!--<version>${spring.version}</version>-->
+            <!--<groupId>org.springframework</groupId>-->
+            <!--<artifactId>spring-web</artifactId>-->
+            <!--<version>${spring.version}</version>-->
             <!--</dependency>-->
             <dependency>
                 <groupId>org.springframework</groupId>
